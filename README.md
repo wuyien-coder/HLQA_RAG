@@ -43,7 +43,7 @@
 
 #### 1. 克隆项目
 ```bash
-cd D:\文章学习\agent_project\readream_RAG_3.13
+cd #
 ```
 
 #### 2. 安装依赖
@@ -78,7 +78,7 @@ python app.py
 ## 📁 项目结构
 
 ```
-readream_RAG_3.13/
+HLQA_RAG/
 ├── documents/              # 文档目录
 │   ├── ai_basics.txt      # AI 基础文档
 │   ├── machine_learning.txt
@@ -90,7 +90,7 @@ readream_RAG_3.13/
 │   ├── css/              # 样式文件
 │   └── js/               # JavaScript 文件
 ├── templates/             # HTML 模板
-├── src.py              # 核心 RAG 系统
+├── main.py              # 核心 RAG 系统
 ├── app.py                 # Flask Web 应用
 ├── requirements.txt       # 依赖包列表
 └── README.md             # 项目说明文档
@@ -205,5 +205,5 @@ A: 删除 `faiss_index/` 文件夹，重启程序会自动重建索引。
 
 ---
 
-**最后更新**: 2026-03-14
+**最后更新**: 2026-03-13
 **版本**: v1.0.0
