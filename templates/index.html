@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>红楼梦 RAG 智能问答系统</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <!-- 头部 -->
+        <header class="header">
+            <div class="logo">📚</div>
+            <h1 class="title">红楼梦 RAG 智能问答系统</h1>
+            <p class="subtitle">基于 FAISS + LangChain + 通义千问的智能问答助手</p>
+        </header>
+
+        <!-- 聊天主界面 -->
+        <main class="chat-container">
+            <!-- 消息显示区域 -->
+            <div class="messages-container" id="messagesContainer">
+                <div class="message bot-message">
+                    <div class="avatar">👦</div>
+                    <div class="content">
+                        <div class="text">你好！我是红楼梦智能问答助手，基于 RAG（检索增强生成）技术。我可以回答关于红楼梦及相关知识的问题。请问有什么可以帮您的？</div>
+                        <div class="time">{{ now_time }}</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 输入区域 -->
+            <div class="input-area">
+                <textarea 
+                    id="questionInput" 
+                    placeholder="请输入您的问题，例如：红楼梦的作者是谁？"
+                    rows="3"
+                ></textarea>
+                <button id="sendBtn" class="send-btn">
+                    <span>发送</span>
+                    <span class="icon">➤</span>
+                </button>
+            </div>
+        </main>
+
+        <!-- 侧边栏 - 显示来源 -->
+        <aside class="sidebar" id="sourceSidebar">
+            <h3>📖 参考资料</h3>
+            <div id="sourcesList" class="sources-list">
+                <p class="empty-tip">暂无参考资料</p>
+            </div>
+        </aside>
+    </div>
+
+    <!-- 加载动画 -->
+    <div class="loading-overlay" id="loadingOverlay">
+        <div class="loading-spinner"></div>
+        <p>正在思考中...</p>
+    </div>
+
+    <!-- 文件详情模态框 -->
+    <div id="fileModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="modalTitle">📄 文件详情</h2>
+                <span class="close-btn" id="closeModal">&times;</span>
+            </div>
+            <div class="modal-body">
+                <div id="fileContent" class="file-content"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
+</html>
