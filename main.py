@@ -32,7 +32,7 @@ class ChatQwen(BaseChatModel):
     
     # 模型配置
     model_name: str = "qwen-plus"
-    api_key: str = "sk-73db4a61c6e645f7a5bc7cb2029eb5cf"  # TODO: 替换为你的 API 密钥
+    api_key: str = "your_api_key"  # TODO: 替换为你的 API 密钥
     base_url: str = "https://dashscope.aliyuncs.com/compatible-mode/v1"
 
     @property
