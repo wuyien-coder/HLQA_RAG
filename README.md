@@ -32,6 +32,9 @@
 - 美观的聊天界面
 - 实时问答交互
 - 显示参考答案来源
+<img width="1846" height="932" alt="image" src="https://github.com/user-attachments/assets/5d23f2f6-742f-4dec-aae7-469400b542aa" />
+
+
 
 ## 🚀 快速开始
 
